@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def site_title(page_title='')
-    base_title="Workout record sharing app"
+    base_title="Workout Record Sharing App"
     if page_title.empty?
       base_title
     else
