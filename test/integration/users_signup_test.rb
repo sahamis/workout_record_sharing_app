@@ -11,7 +11,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_response :unprocessable_entity
     assert_template 'users/new'
     assert_select 'div#error_explanation'
-    assert_select 'div.alert'
+    assert_select 'div.alert', "The form contains 4 errors"
   end
 
   test "valid signup information" do
