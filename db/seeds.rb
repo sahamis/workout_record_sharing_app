@@ -1,7 +1,7 @@
 #メインのサンプルユーザーを１人作成
 User.create!(name: "Example User", email: "user@example.com",
              password: "foobarbaz", password_confirmation: "foobarbaz",
-             admin: true)
+             admin: true, activated: true, activated_at: Time.zone.now)
 
 #追加のユーザーをまとめて作成
 99.times do |n|
@@ -9,5 +9,6 @@ User.create!(name: "Example User", email: "user@example.com",
   email = "example-#{n+1}@example.com"
   password = "password"
   User.create!(name: name, email: email,
-               password: password, password_confirmation: password)
+               password: password, password_confirmation: password,
+               activated: true, activated_at: Time.zone.now)
 end

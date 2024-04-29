@@ -1,0 +1,15 @@
+<p><%= @user.name %>様</p>
+
+<p>
+  この度はご登録いただきありがとうございます。<br>
+  このメールはメールアドレス認証用のメールとなります。<br>
+  下記のアドレスをクリックして会員登録を完了させてください。
+</p>
+
+<%= link_to( "メールアドレス認証", edit_account_activation_url(@user.activation_token, email: @user.email)) %>
+
+<p>このメールに心当たりがない場合は、<%= link_to "こちらまで", contact_url %> お問い合わせください。</p>
+
+<%= link_to "Workout record sharing App", root_url %>
+
+
